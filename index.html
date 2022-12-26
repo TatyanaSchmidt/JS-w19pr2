@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cats</title>
+  </head>
+  <body>
+    <h1>Расскажи про своего котэ😉</h1>
+    <form>
+      <div>
+        <label for="petsname">Кличка питомца</label>
+        <input
+          type="text"
+          id="petsname"
+          name="petsname"
+          placeholder="Напишите как зовут котэ.."
+        />
+      </div>
+      <div>
+        <label for="ownername">Имя владельца</label>
+        <input
+          type="text"
+          id="ownername"
+          name="ownername"
+          placeholder="Ваше ФИО"
+        />
+      </div>
+      <div>
+        <label for="ownercontact">Контакты владельца</label>
+        <input
+          type="tel"
+          id="ownercontact"
+          name="ownercontact"
+          placeholder="Ваш телефон"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="petbreed">Порода питомца</label>
+        <select id="petbreed">
+          <option value="Русская голубая">Русская голубая</option>
+          <option value="Сиамская">Сиамская</option>
+          <option value="Бенгальская">Бенгальская</option>
+          <option value="Мэйнкун">Мэйнкун</option>
+          <option value="Метис">Метис</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="foodtype">Чем питается</label>
+        <input
+          type="checkbox"
+          name="foodtype"
+          id="foodtype1"
+          value="сухой корм"
+        />сухой корм
+        <input
+          type="checkbox"
+          name="foodtype"
+          id="foodtype2"
+          value="влажный корм"
+        />влажный корм
+        <input
+          type="checkbox"
+          name="foodtype"
+          id="foodtype3"
+          value="натуральный корм"
+        />натуральный корм
+      </div>
+      <div>
+        <label for="petsex">Самец или самка</label>
+        <input type="radio" name="petsex" id="petmale" value="Самец" />Самец
+        <input type="radio" name="petsex" id="petfemale" value="Самка" />Самка
+      </div>
+      <div>
+        <label for="comments">Комментарий владельца</label>
+        <textarea id="comments" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <label for="petfoto">Приложить фото питомца</label>
+        <input type="file" id="petfoto" />
+      </div>
+      <button type="submit" onclick="dataSaveToObject(event)">Сохранить</button>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>

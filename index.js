@@ -1,3 +1,16 @@
+class CatData{
+    constructor (petsname,ownername,ownercontact,petbreed,foodtype,petsex,comments,petfoto){
+        this.petsname = petsname;
+        this.ownername = ownername;
+        this.ownercontact = ownercontact;
+        this.petbreed = petbreed;
+        this.foodtype = foodtype;
+        this.petsex = petsex;
+        this.comments = comments;
+        this.petfoto = petfoto;
+    }
+}
+
 const dataSaveToObject = (e) => {
     e.preventDefault();
 
@@ -11,6 +24,9 @@ const dataSaveToObject = (e) => {
     const comments = document.querySelector('#comments').value;
     const petfoto = document.querySelector('#petfoto').files[0];
     
-    const petData = {petsname,ownername,ownercontact,petbreed,foodtype,petsex,comments,petfoto};
+    const petData = new CatData (petsname,ownername,ownercontact,petbreed,foodtype,petsex,comments,petfoto);
     console.log(petData);
 }
+
+// let employee1 = new Employee ("Skopin", "Alex",500,10);
+// console.log(petData);
